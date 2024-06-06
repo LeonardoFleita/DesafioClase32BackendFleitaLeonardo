@@ -1,0 +1,18 @@
+<article>
+  <h2>Productos</h2>
+  <div id="productsContainerIndex">
+    {{#each products}}
+      <div class="productCard">
+        <h3>{{title}}</h3>
+        <img src="{{thumbnail}}" alt={{title}} />
+        <p style="font-weight: 600">{{description}}</p>
+        <p>Categoría: {{category}}</p>
+        <p>Precio: {{price}}</p>
+        <p>Código: {{code}}</p>
+        <p>Stock: {{stock}}</p>
+        <p>Id: {{id}}</p>
+        <button style="margin-top: 1rem;">Agregar al carrito</button>
+      </div>
+    {{/each}}
+  </div>
+</article>

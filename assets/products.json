@@ -1,0 +1,119 @@
+[
+	{
+		"title": "leche",
+		"description": "Leche en sachet 1ltr",
+		"price": 1000,
+		"thumbnail": [
+			"https://acdn.mitiendanube.com/stores/093/780/products/serenisima-clasica-751-95fea92d1a27f8e9ab15710914346750-1024-1024.webp"
+		],
+		"code": "abc123",
+		"stock": 20,
+		"id": 1,
+		"category": "Lácteos",
+		"status": true
+	},
+	{
+		"title": "Arroz",
+		"description": "Arroz 1kg",
+		"price": 1500,
+		"thumbnail": [
+			"https://www.distribuidoramilenium.com.ar/images/26403.jpg"
+		],
+		"code": "abc124",
+		"stock": 75,
+		"id": 2,
+		"category": "Granos",
+		"status": true
+	},
+	{
+		"title": "Sal",
+		"description": "Sal fina 500gr",
+		"price": 900,
+		"thumbnail": [
+			"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8NRzN7g7daDvW7Roee0f3ieTht9DdByVkuw&usqp=CAU"
+		],
+		"code": "abc125",
+		"stock": 20,
+		"id": 3,
+		"category": "Condimentos",
+		"status": true
+	},
+	{
+		"title": "Porotos",
+		"description": "Porotos negros 500gr",
+		"price": 11000,
+		"thumbnail": [
+			"https://carrefourar.vtexassets.com/arquivos/ids/177344/2611351000007_02.jpg?v=637468576329500000"
+		],
+		"code": "abc126",
+		"stock": 48,
+		"id": 4,
+		"category": "Granos",
+		"status": true
+	},
+	{
+		"title": "Yerba",
+		"description": "Yerba 1kg",
+		"price": 1700,
+		"thumbnail": [
+			"https://ardiaprod.vtexassets.com/arquivos/ids/274319/Yerba-Mate-Playadito-Suave-1-Kg-_1.jpg?v=638322565119470000"
+		],
+		"code": "abc127",
+		"stock": 33,
+		"id": 5,
+		"category": "Infusiones",
+		"status": true
+	},
+	{
+		"title": "Té",
+		"description": "Te negro 50 saquitos",
+		"price": 900,
+		"thumbnail": [
+			"https://masonlineprod.vtexassets.com/arquivos/ids/163869-800-auto?v=637835134751730000&width=800&height=auto&aspect=true"
+		],
+		"code": "abc128",
+		"stock": 18,
+		"id": 6,
+		"category": "Infusiones",
+		"status": true
+	},
+	{
+		"title": "Agua",
+		"description": "Botella de agua 2ltr",
+		"price": 1000,
+		"thumbnail": [
+			"https://acdn.mitiendanube.com/stores/001/058/870/products/dano08_1-db9c16a29030be829416698403459906-640-0.jpg"
+		],
+		"code": "abc129",
+		"stock": 50,
+		"id": 7,
+		"category": "Bebidas",
+		"status": true
+	},
+	{
+		"title": "Coca cola",
+		"description": "Botella de gaseosa coca cola 2.25ltr",
+		"price": 1800,
+		"thumbnail": [
+			"https://media.f2h.shop/media/catalog/product/cache/ab45d104292f1bb63d093e6be8310c97/i/m/imageedit_3_4516158279.png"
+		],
+		"code": "abc130",
+		"stock": 16,
+		"id": 8,
+		"category": "Bebidas",
+		"status": true
+	},
+	{
+		"title": "Yogurt entero",
+		"description": "Yogurt entero 190gr",
+		"price": 850,
+		"thumbnail": [
+			"https://d1on8qs0xdu5jz.cloudfront.net/webapp/images/productos/b/0000012000/12046.jpg"
+		],
+		"code": "abc131",
+		"stock": 6,
+		"id": 9,
+		"category": "Lácteos",
+		"status": true
+	}
+]

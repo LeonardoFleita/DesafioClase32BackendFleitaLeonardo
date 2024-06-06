@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+}
+
+.navbarLogin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+  &:hover {
+    color: orange;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: chocolate;
+  color: white;
+}
+
+.formContainer {
+  background-color: bisque;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  color: black;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+input {
+  width: inherit;
+}
+
+#productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 2rem;
+  color: black;
+}
+
+#productsContainerIndex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 2rem;
+  color: black;
+}
+
+#cartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: bisque;
+  padding: 2rem;
+  color: black;
+}
+
+.productCard {
+  border-radius: 10px;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+}
+
+.cartCard {
+  border-radius: 10px;
+  width: 70rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+}
+
+img {
+  width: 10rem;
+  margin: 1rem;
+}

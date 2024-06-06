@@ -1,0 +1,16 @@
+<article>
+  <h2>Iniciar sesión</h2>
+  <div class="formContainer">
+
+    <form action="/api/sessions/loginView" method="post">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" name="email" />
+      <label for="pass">Contraseña</label>
+      <input type="password" id="pass" name="password" />
+      <button type="submit">Iniciar</button>
+      <a href="/register" style="color: darkolivegreen">Registrarse</a>
+      {{! <a href="/api/sessions/github" style="color: darkolivegreen">Entrar con
+        github</a> }}
+    </form>
+  </div>
+</article>
