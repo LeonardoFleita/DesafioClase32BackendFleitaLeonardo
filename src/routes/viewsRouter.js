@@ -1,8 +1,22 @@
 const { Router } = require("express");
-const { isNotLoggedIn, isLoggedIn } = require("../middlewares/auth.middleware");
+const {
+  isNotLoggedIn,
+  isLoggedIn,
+  isAdmin,
+} = require("../middlewares/auth.middleware");
 const { generateProduct } = require("../mocks/generateProducts");
+const { ProductService } = require("../services/productService");
+const { ProductController } = require("../controllers/productController");
 
 const router = Router();
+
+// const withProductController = (callback) => {
+//   return (req, res) => {
+//     const service = new ProductService(req.app.get("productManager"));
+//     const controller = new ProductController(service);
+//     return callback(controller, req, res);
+//   };
+// };
 
 //Función que verifica y retorna si el usuario está logueado y los datos del usuario
 
@@ -41,7 +55,6 @@ router.get(`/mockingproducts`, async (req, res) => {
   res.render(`index`, {
     title: "Productos",
     products: products,
-    ws: true,
     scripts: ["index.js"],
     css: ["styles.css"],
     endPoint: "Home",
@@ -69,13 +82,30 @@ router.get(`/`, async (req, res) => {
   );
   const { user, isLoggedIn } = await userSession(req);
 
+  const isAdmin = user?.role === "admin" ? true : false;
+
   res.render(`index`, {
     title: "Productos",
     products: products.docs,
-    ws: true,
     scripts: ["index.js"],
     css: ["styles.css"],
     endPoint: "Home",
+    login: true,
+    isAdmin,
+    isLoggedIn,
+    user,
+  });
+});
+
+//Formulario para agregar productos a la base de datos
+
+router.get("/addProducts", isLoggedIn, isAdmin, async (req, res) => {
+  const { user, isLoggedIn } = await userSession(req);
+  res.render(`addProducts`, {
+    title: "Formulario",
+    scripts: ["index.js"],
+    css: ["styles.css"],
+    endPoint: "Agregar productos",
     login: true,
     isLoggedIn,
     user,
@@ -95,7 +125,6 @@ router.get("/carts/:cId", isLoggedIn, async (req, res) => {
   res.render("cart", {
     title: "Carrito",
     products: products,
-    ws: true,
     scripts: ["cart.js"],
     css: ["styles.css"],
     endPoint: "Cart",
@@ -110,7 +139,6 @@ router.get("/carts/:cId", isLoggedIn, async (req, res) => {
 router.get("/login", isNotLoggedIn, (req, res) => {
   res.render("login", {
     title: "Login",
-    ws: false,
     css: ["styles.css"],
     endPoint: "Login",
     login: false,
@@ -122,7 +150,6 @@ router.get("/login", isNotLoggedIn, (req, res) => {
 router.get("/register", isNotLoggedIn, (req, res) => {
   res.render("register", {
     title: "Registro",
-    ws: false,
     css: ["styles.css"],
     endPoint: "Registro",
     login: false,

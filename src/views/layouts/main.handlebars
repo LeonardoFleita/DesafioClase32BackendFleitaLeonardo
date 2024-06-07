@@ -18,6 +18,9 @@
             <p>Bienvenido/a {{user.firstName}} {{user.lastName}}</p>
             <p>email: {{user.email}}</p>
             <p>Rol: {{user.role}}</p>
+            {{#if isAdmin}}
+              <a href="/addProducts">Agregar productos</a>
+            {{/if}}
             <a href="/api/sessions/logoutView">Logout</a>
           {{else}}
             <a href="/login">Iniciar sesión</a>
@@ -30,10 +33,6 @@
 
       {{{body}}}
     </main>
-    {{#if ws}}
-      <script src="/socket.io/socket.io.js"></script>
-
-    {{/if}}
 
     {{#if useSweetAlert}}
       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
